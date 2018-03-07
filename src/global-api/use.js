@@ -1,6 +1,6 @@
 /* @flow */
 
-import { toArray } from '../util/index'
+import { toArray } from '../utils/index'
 // https://cn.vuejs.org/v2/api/#Vue-use
 // 安装 Vue.js 插件。如果插件是一个对象，必须提供 install 方法。如果插件是一个函数，它会被作为 install 方法。install 方法调用时，会将 Vue 作为参数传入。
 

@@ -2,7 +2,7 @@
 
 import { ASSET_TYPES } from '../../shared/constants'
 import { defineComputed, proxy } from '../instance/state'
-import { extend, mergeOptions, validateComponentName } from '../util/index'
+import { extend, mergeOptions, validateComponentName } from '../utils/index'
 
 export function initExtend(Vue) {
   /**

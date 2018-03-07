@@ -23,7 +23,6 @@ export function initMixin(MyVue) {
       initInternalComponent(vm, options)
     } else {
       // merge options
-      console.log(vm.constructor)
       vm.$options = mergeOptions(
         // TODO 理解
         resolveConstructorOptions(vm.constructor),

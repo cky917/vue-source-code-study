@@ -1,7 +1,7 @@
 /* @flow */
 
 import { ASSET_TYPES } from '../../shared/constants'
-import { isPlainObject, validateComponentName } from '../util/index'
+import { isPlainObject, validateComponentName } from '../utils/index'
 
 export function initAssetRegisters(Vue) {
   console.log('initAssetRegisters')
