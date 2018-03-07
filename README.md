@@ -4,3 +4,5 @@
 主要是从头跟着源码的思路敲一遍，理解
 
 start: `npm run start`
+
+学习笔记见`notes`文件夹

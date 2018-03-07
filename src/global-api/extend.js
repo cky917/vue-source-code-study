@@ -5,6 +5,7 @@ import { defineComputed, proxy } from '../instance/state'
 import { extend, mergeOptions, validateComponentName } from '../utils/index'
 
 export function initExtend(Vue) {
+  console.log('initExtend')
   /**
    * Each instance constructor, including Vue, has a unique
    * cid. This enables us to create wrapped "child
@@ -18,7 +19,6 @@ export function initExtend(Vue) {
    */
   // TODO
   Vue.extend = function(extendOptions) {
-    console.log('extend')
     // extendOptions = extendOptions || {}
     // const Super = this
     // const SuperId = Super.cid
