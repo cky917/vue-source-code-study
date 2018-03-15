@@ -1,6 +1,7 @@
 import { def } from './observer'
 const arrayProto = Array.prototype
 export const arrayMethods = Object.create(arrayProto)
+
 const methodsToPatch = [
   'push',
   'pop',
@@ -30,9 +31,11 @@ methodsToPatch.forEach(function(method) {
         inserted = args.slice(2)
         break
     }
-    if (inserted) ob.observeArray(inserted)
+    // 如果新插入值的方法，
+    if (inserted) ob.walk(inserted)
     // notify change
-    ob.dep.notify()
+    // ob.dep.notify()
+    console.log(`我是数组，被${method}方法改变了`)
     return result
   })
 })

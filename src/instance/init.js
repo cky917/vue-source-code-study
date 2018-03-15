@@ -34,7 +34,7 @@ export function initMixin(MyVue) {
     // if (process.env.NODE_ENV !== 'production') {
     //   initProxy(vm)
     // } else {
-    //   vm._renderProxy = vm
+    vm._renderProxy = vm
     // }
     // expose real self
     vm._self = vm
@@ -56,7 +56,7 @@ export function initMixin(MyVue) {
 
 export function resolveConstructorOptions(Ctor) {
   let options = Ctor.options
-  if (Ctor.super) {
+  if (Ctor.super) { // 这里的super是在Vue.extend方法里赋值的
     const superOptions = resolveConstructorOptions(Ctor.super)
     const cachedSuperOptions = Ctor.superOptions
     if (superOptions !== cachedSuperOptions) {
