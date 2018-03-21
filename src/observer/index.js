@@ -6,6 +6,7 @@ import {
   isObject,
   isValidArrayIndex,
   hasOwn,
+  isPlainObject,
   isServerRendering
 } from '../utils/index'
 
@@ -154,15 +155,15 @@ function copyAugment (target, src, keys) {
  * or the existing observer if the value already has one.
  */
 export function observe (value, asRootData) {
-  if (!isObject(value) || value instanceof VNode) {
+  if (!isObject(value)) {
     return
   }
   let ob
   if (hasOwn(value, '__ob__') && value.__ob__ instanceof Observer) {
     ob = value.__ob__
   } else if (
-    observerState.shouldConvert &&
-    !isServerRendering() &&
+    // observerState.shouldConvert &&
+    // !isServerRendering() &&
     (Array.isArray(value) || isPlainObject(value)) &&
     Object.isExtensible(value) &&
     !value._isVue
